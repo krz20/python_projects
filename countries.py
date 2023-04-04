@@ -46,7 +46,6 @@ while True:
             response = requests.get(url)
             if response.status_code == 200:
                 country_data = response.json()
-                #countries = [country["name"] for country in country_data] #this puts it back in a list
                 print(f"Countries speaking {language}:")
                 for country in country_data:
                     print(country['name']['common'])
